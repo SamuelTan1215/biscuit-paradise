@@ -1,7 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: process.env.NODE_ENV === 'production' ? '/Biscuit-Paradise/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/biscuit-paradise/' : '/',
   configureWebpack: {
     performance: {
       hints: false, // 或 'warning' 或 'error'
