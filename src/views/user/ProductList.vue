@@ -50,11 +50,10 @@
                       {{ item.category }}
                     </span>
                   </div>
-
                   <hr />
-
                   <p class="card-text">{{ item.description }}</p>
                 </div>
+
                 <div>
                   <div class="text-end">
                     <p class="h5" v-if="item.price === item.origin_price">
@@ -67,6 +66,7 @@
                       特價 {{ $formatFilters.currency(item.price) }} 元
                     </p>
                   </div>
+                  <!-- relative定位讓toggleFavourite正常運作 -->
                   <div class="text-end position-relative" style="z-index:3;">
                     <button
                       type="button"

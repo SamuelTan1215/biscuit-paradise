@@ -79,6 +79,8 @@
   </div>
 </template>
 
+
+
 <script>
 import favorite from '@/methods/favorite'
 

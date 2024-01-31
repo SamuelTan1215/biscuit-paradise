@@ -29,6 +29,7 @@ const routes = [
     children: [
       {
         path: '',
+        name: 'home',
         component: () => import('@/views/user/HomePage.vue')
       },
       {
@@ -69,6 +70,13 @@ const routes = [
         component: () => import('../views/user/FAQ.vue')
       },
     ],
+  },
+  // 重新導向
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: {
+      name: 'home',
+    },
   },
 ]
 
