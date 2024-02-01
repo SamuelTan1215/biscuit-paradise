@@ -35,7 +35,7 @@
             </router-link>
             <p class="text-muted ">不是管理者嗎?</p>
           </div>
-          <button class="btn btn-lg btn-primary btn-block" type="submit">登入</button>
+          <button class="btn btn-lg btn-primary btn-block " type="submit">登入</button>
         </div>
 
       </div>

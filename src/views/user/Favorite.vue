@@ -19,13 +19,13 @@
             class="bi bi-suit-heart-fill text-danger"
             style="font-size: 150px"
           />
-          <p class="fs-2">購物車是空的，來去逛逛吧!</p>
+          <p class="fs-2">我的最愛是空的，來去收藏吧!</p>
           <button
             type="button"
-            class="btn btn-outline-primary shadow-sm"
+            class="btn btn-outline-primary shadow-sm fw-bold"
             @click="$router.push('/user/productList')"
           >
-            看看更多餅乾
+            收藏更多餅乾
           </button>
         </div>
         <div

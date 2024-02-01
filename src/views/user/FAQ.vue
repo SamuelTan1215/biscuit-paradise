@@ -2,7 +2,7 @@
   <div class="container py-lg-5">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><router-link to="/user">首頁</router-link></li>
+        <li class="breadcrumb-item"><router-link to="/user" >首頁</router-link></li>
         <li class="breadcrumb-item">常見問題</li>
       </ol>
     </nav>
@@ -10,7 +10,7 @@
       <div class="text-white text-center p-3 cover d-inline-block">
         <p class="mb-0">餅乾天堂，品味自己的甜蜜世界</p>
         <h1 class="fw-bold my-3">常見問題</h1>
-        <p class="mb-0">放心選購，開心品味！讓您的甜蜜之旅更加順心。</p>
+        <p class="mb-0">放心選購，開心品味！<br class="d-block d-md-none">讓您的甜蜜之旅更加順心。</p>
       </div>
     </div>
     <div class="accordion py-5" id="accordionExample">
@@ -111,6 +111,10 @@
 }
 .cover {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+.active-class {
+  text-decoration: none;
+  color: red;
 }
 
 </style>

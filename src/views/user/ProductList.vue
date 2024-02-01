@@ -10,7 +10,7 @@
     <div class="productlist text-center px-4 py-5">
       <div class="text-white text-center p-3 cover d-inline-block">
         <h1 class="fw-bold my-3">產品列表</h1>
-        <p class="mb-0">「挑戰味覺極限，一口餅乾，一場美味革命。」</p>
+        <p class="mb-0">「挑戰味覺極限，一口餅乾，<br class="d-block d-md-none"> 一場美味革命。」</p>
       </div>
     </div>
     <div class="row g-4 justify-content-around py-5">

@@ -11,8 +11,8 @@
   >
     <button
       type="button"
-      class="btn btn-primary text-white rounded-circle fs-5"
-      style="height: 50px; width: 50px"
+      class="btn btn-dark text-white rounded-circle opacity-50"
+      style="height: 30px; width: 30px; padding: 0;"
       @click="scrollToTop"
     >
       <i class="bi bi-arrow-up"/>

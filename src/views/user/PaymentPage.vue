@@ -73,7 +73,7 @@
           </tr>
           <tr>
             <th>收件人地址</th>
-            <td>{{ order.user.address }}</td>
+            <td class="text-break">{{ order.user.address }}</td>
           </tr>
           <tr>
             <th>付款狀態</th>

@@ -12,7 +12,7 @@
     <div class="text-center pb-5" :class="{ 'd-none': cart.total !== 0 }">
       <i class="bi bi-cart4" style="font-size: 150px"/>
       <p class="fs-2">購物車是空的，來去逛逛吧!</p>
-      <button type="button" class="btn btn-outline-primary shadow-sm" @click="$router.push('/user/productList')">
+      <button type="button" class="btn btn-outline-primary shadow-sm fw-bold" @click="$router.push('/user/productList')">
         看看更多餅乾
       </button>
     </div>
@@ -106,7 +106,7 @@
           </div>
           <button
             type="button"
-            class="btn btn-outline-primary shadow-sm w-100"
+            class="btn btn-outline-primary shadow-sm w-100 "
             @click="this.$router.push('/user/checkout')"
             :class="{ disabled: cart.total === 0 }"
           >

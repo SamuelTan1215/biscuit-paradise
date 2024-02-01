@@ -92,7 +92,7 @@
         </div>
       </div>
       <Form
-        class="col-md-6 border p-3"
+        class="col-md-6 border p-3 my-3 my-md-0"
         v-slot="{ errors }"
         @submit="createOrder"
       >
@@ -170,7 +170,7 @@
             <option value="ApplePay">ApplePay</option>
             <option value="GooglePay">GooglePay</option>
           </select>
-          <ErrorMessage name="地址" class="invalid-feedback" />
+          <ErrorMessage name="付款方式" class="invalid-feedback " />
         </div>
 
         <div class="mb-3">

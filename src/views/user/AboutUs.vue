@@ -10,7 +10,7 @@
       <div class="text-white text-center p-3 cover d-inline-block">
         <p class="mb-0">品味我們的故事</p>
         <h1 class="fw-bold my-3">關於我們</h1>
-        <p class="mb-0">歡迎加入我們的甜蜜行列，一起尋找屬於你的快樂滋味！</p>
+        <p class="mb-0">歡迎加入我們的甜蜜行列，<br class="d-block d-md-none">一起尋找屬於你的快樂滋味！</p>
       </div>
     </div>
     <div class="row flex-row-reverse g-3 pt-5">
@@ -29,7 +29,7 @@
     <div class="row g-3 py-5">
       <div class="col-lg-6 d-flex align-items-center">
         <div>
-          <h2 class="fw-bold">閃耀新滋味，"夢幻可頌"登場！</h2>
+          <h2 class="fw-bold text-center text-md-start">閃耀新滋味，<br class="d-block d-md-none"> "夢幻可頌"登場！</h2>
           <p class="lh-lg text-secondary mb-0">
             在餅乾天堂，我們一直以來都追求美味的極致。現在，除了我們經典的餅乾外，全新的夢幻可頌系列也正式登場！用心製作，帶給您更多層次的口感和驚喜滋味。品味新滋味，一同享受甜蜜的時光。
           </p>

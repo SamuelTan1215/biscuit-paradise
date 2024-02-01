@@ -32,7 +32,7 @@
   <div class="text-center">
     <i class="bi bi-check-circle-fill text-success fs-1"></i>
     <h2 class="fw-bold my-3">恭喜您，購買完成!</h2>
-    <h3>商品會在1至2個工作天內送達</h3>
+    <h3>商品預計在3至5個工作天內送達</h3>
   </div>
   <div class="d-flex justify-content-center my-3">
     <button type="button" class="btn btn-outline-primary shadow-sm m-3" @click="$router.push('/user')">
