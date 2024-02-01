@@ -105,8 +105,6 @@ export default {
       if (this.favorite == null) {
         this.favorite = {}
       }
-// bug
-      console.log(this.favorite);
       this.favNum = this.favorite.length
     }
   },
