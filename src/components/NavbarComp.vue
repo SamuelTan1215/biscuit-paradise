@@ -26,6 +26,13 @@
   </nav>
 </template>
 
+<style lang="scss" scoped>
+  .active-class {
+  text-decoration: none;
+  color: red;
+}
+</style>
+
 <script>
 export default {
   methods: {

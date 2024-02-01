@@ -66,7 +66,7 @@
               >照片</span
             >及<span class="text-danger">訂單編號</span
             >訂單編號並一併寄電子郵件至<a
-              href="mailto:toy-factory@support.com"
+              href="mailto:example@service.com"
               class="text-decoration-none"
               >客服信箱</a
             >。我們將盡快為您處理!
