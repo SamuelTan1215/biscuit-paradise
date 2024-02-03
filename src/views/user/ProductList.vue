@@ -3,7 +3,7 @@
   <section class="container py-lg-5">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><router-link to="/user" >首頁</router-link></li>
+        <li class="breadcrumb-item"><router-link to="/user" active-class="active-reset">首頁</router-link></li>
         <li class="breadcrumb-item">產品列表</li>
       </ol>
     </nav>
@@ -39,6 +39,7 @@
                 style="object-fit: cover; height: 200px; cursor: pointer"
                 :alt="item.title"
                 :title="item.title"
+                loading="lazy"
               />
               <div class="card-body d-flex flex-column justify-content-between">
                 <div>
@@ -132,6 +133,12 @@
   font-weight: normal !important;
   color: inherit !important;
 }
+
+.active-reset {
+  text-decoration: none;
+  color: #212529;
+}
+
 </style>
 
 

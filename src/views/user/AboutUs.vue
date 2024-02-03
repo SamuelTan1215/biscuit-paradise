@@ -2,7 +2,7 @@
   <section class="container py-lg-5">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><router-link to="/user">首頁</router-link></li>
+        <li class="breadcrumb-item"><router-link to="/user" active-class="active-reset">首頁</router-link></li>
         <li class="breadcrumb-item">關於我們</li>
       </ol>
     </nav>
@@ -52,4 +52,10 @@
   height: 350px;
   background-size: cover;
 }
+
+.active-reset {
+  text-decoration: none;
+  color: #212529;
+}
+
 </style>

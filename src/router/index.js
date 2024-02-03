@@ -7,11 +7,11 @@ const routes = [
   },
   {
     path: '/dashboard',
-    component: () => import('../views/back/DashboardView.vue'),
+    component: () => import('../views/back/Dashboard.vue'),
     children: [
       {
         path: 'products',
-        component: () => import('../views/back/ProductsView.vue'),
+        component: () => import('../views/back/Products.vue'),
       },
       {
         path: 'orders',

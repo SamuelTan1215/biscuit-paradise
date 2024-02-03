@@ -31,13 +31,13 @@
             id="navbarNavAltMarkup"
           >
             <div class="navbar-nav">
-              <router-link to="/user/productList" class="nav-link fs-5"
+              <router-link to="/user/productList" class="nav-link fs-5 hvr-fade"
                 >產品列表</router-link
               >
-              <router-link to="/user/about" class="nav-link fs-5"
+              <router-link to="/user/about" class="nav-link fs-5 hvr-fade"
                 >關於我們</router-link
               >
-              <router-link to="/user/faq" class="nav-link fs-5"
+              <router-link to="/user/faq" class="nav-link fs-5 hvr-fade"
                 >常見問題</router-link
               >
             </div>
@@ -79,7 +79,24 @@
   </div>
 </template>
 
-
+<style lang="scss" scoped>
+.hvr-fade {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  overflow: hidden;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+  background-color: #6bdace;
+  color: white;
+}
+</style>
 
 <script>
 import favorite from '@/methods/favorite'

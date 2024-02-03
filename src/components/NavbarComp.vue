@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <!-- <a class="navbar-brand" href="#">管理者後台</a> -->
-      <router-link class="navbar-brand" to="/dashboard/products" >管理者後台</router-link>
+      <router-link class="navbar-brand"  to="/dashboard/products" exact-active-class="link-light">管理者後台</router-link>
       <button 
         class="navbar-toggler"
         type="button"
@@ -16,10 +16,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <router-link to="/dashboard/products" class="nav-link">產品</router-link>
-          <router-link to="/dashboard/orders" class="nav-link">訂單</router-link>
-          <router-link to="/dashboard/coupons" class="nav-link">優惠券</router-link>
-          <a href="#" @click.prevent="logout" class="nav-link">登出</a>
+          <router-link to="/dashboard/products" class="nav-link" exact-active-class="link-light">產品</router-link>
+          <router-link to="/dashboard/orders" class="nav-link" exact-active-class="link-light">訂單</router-link>
+          <router-link to="/dashboard/coupons" class="nav-link" exact-active-class="link-light">優惠券</router-link>
+          <a href="#" @click.prevent="logout" class="nav-link" exact-active-class="link-light">登出</a>
         </div>
       </div>
     </div>
@@ -27,9 +27,10 @@
 </template>
 
 <style lang="scss" scoped>
-  .active-class {
-  text-decoration: none;
-  color: red;
+.router-link-exact-active {
+    background-color: transparent ;
+    font-weight: 1.1 ;
+    color: rgba(255, 255, 255, 0.55) ;
 }
 </style>
 

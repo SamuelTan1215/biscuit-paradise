@@ -3,7 +3,7 @@
   <div class="container py-lg-5">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><router-link to="/user">首頁</router-link></li>
+        <li class="breadcrumb-item"><router-link to="/user" active-class="active-reset">首頁</router-link></li>
         <li class="breadcrumb-item">我的最愛</li>
       </ol>
     </nav>
@@ -88,6 +88,11 @@
     -o-object-fit: cover;
     object-fit: cover;
 }
+.active-reset {
+  text-decoration: none;
+  color: #212529;
+}
+
 </style>
 
 <script>

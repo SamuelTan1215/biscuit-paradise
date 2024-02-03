@@ -16,6 +16,9 @@ git init
 git add -A
 git commit -m 'deploy'
 
+# 加先把 master 分支名稱改成 main 再推到遠端數據庫的 main 分支 
+git branch -m main 
+
 # 部署到 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 

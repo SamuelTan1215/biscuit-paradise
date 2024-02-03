@@ -2,7 +2,8 @@
   <div class="container py-lg-5">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><router-link to="/user" >首頁</router-link></li>
+        <li class="breadcrumb-item"><router-link to="/user" active-class="active-reset
+          ">首頁</router-link></li>
         <li class="breadcrumb-item">常見問題</li>
       </ol>
     </nav>
@@ -112,9 +113,9 @@
 .cover {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 }
-.active-class {
+.active-reset {
   text-decoration: none;
-  color: red;
+  color: #212529;
 }
 
 </style>
