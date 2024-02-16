@@ -1,13 +1,13 @@
 <template>
   <LoadingComp :active="isLoading" />
-  <div class="container py-5">
+  <div class="container py-lg-5">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><router-link to="/user">首頁</router-link></li>
-        <li class="breadcrumb-item">
+        <li class="breadcrumb-item" active-class="active-reset">
           <router-link to="/user/productList">產品列表</router-link>
         </li>
-        <li class="breadcrumb-item active" aria-current="page">
+        <li class="breadcrumb-item " aria-current="page" exact-active-class="active-reset">
           {{ product.title }}
         </li>
       </ol>
@@ -22,8 +22,8 @@
           />
           <button
             type="button"
-            class="btn btn-primary btnCircle rounded-circle fs-4 text-white position-absolute favBtn"
-            :class="{ active: favorite.includes(product.id) }"
+            class="btn btn-primary rounded-circle fs-4 text-white position-absolute border-0 favBtn"
+            :class="{ activeFav: favorite.includes(product.id) }"
             @click="toggleFavorite(product)"
           >
             <i class="bi bi-suit-heart" />
@@ -118,12 +118,12 @@
         aria-labelledby="first-tab"
       >
         <ul>
-          <li>所有的展示詳細尺寸材質以及商品描述均有詳細說明。</li>
+          <li>所有商品均提供詳細的尺寸、細節，確保您充分了解每項產品。</li>
           <li>
-            如果產品在架上就是代表有貨，但是偶爾有貨在路上的情況，遇上此情況還望見諒，靜心等待。
+            商品顯示在架上即代表有現貨，但有時貨物仍在運送途中，造成短暫等待，敬請見諒。
           </li>
           <li>
-            關於退換貨，請見<a
+            退換貨事宜，請參閱我們的常見問題頁面<a
               class="link"
               @click.prevent="$router.push('/user/faq')"
               style="cursor: pointer"
@@ -139,9 +139,12 @@
         aria-labelledby="second-tab"
       >
         <ul>
-          <li>正常情況我們會在48小時內發貨，如果未能及時出貨，請聯繫客服。</li>
+          <li>一般情況下，我們將在48小時內快速為您發貨，確保您第一時間收到心儀的產品</li>
           <li>
-            如遇節日，訂單量多時，可能會延後出貨，還請見諒。我們希望每個人都能收到正確的玩具!
+            若未能及時出貨，請您隨時聯繫我們的客服團隊，我們將竭誠為您處理。
+          </li>
+          <li>
+            在節日或訂單量龐大的情況下，可能會稍微延後出貨，敬請見諒。我們致力於讓每一位顧客都能享受到最高品質的美味體驗！感謝您的理解與支持。
           </li>
         </ul>
       </div>
@@ -153,10 +156,10 @@
       >
         <ul>
           <li>
-            我們與白貓宅急便合作，發貨後通常會於1至2天內送到您手上，請耐心等待。
+            我們與各大物流平台合作，發貨後通常會於1至2天內送到您手上，請耐心等待。
           </li>
           <li>
-            如需查詢物流進度，歡迎至白貓宅急便官網的「訂單查詢」頁面進行查詢。
+            如需查詢物流進度，歡迎至物流平台官網的「訂單查詢」頁面進行查詢。
           </li>
         </ul>
       </div>
@@ -172,7 +175,20 @@
     top: 10px;
     right: 10px;
 }
+.activeFav{
+  background-color:crimson;
+}
 
+.router-link-exact-active {
+  background-color: transparent !important;
+  font-weight: normal !important;
+  color: inherit !important;
+}
+
+.active-reset {
+  text-decoration: none;
+  color: #212529;
+}
 </style>
 
 <script>

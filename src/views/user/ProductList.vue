@@ -117,16 +117,14 @@
     transform: scale(1.05);
   }
 }
-.btn-primary:hover{
-  background-color: bisque;
-}
+
 
 .fixed-width-button {
   width: 100%; /* 或者使用具體的寬度值，確保每個按鈕有相同的寬度 */
 }
 
 .active{
-  background-color:sandybrown;
+  background-color:crimson;
 }
 .router-link-exact-active {
   background-color: transparent !important;

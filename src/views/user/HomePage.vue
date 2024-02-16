@@ -296,7 +296,7 @@ export default {
       })
     },
     getProduct (id) {
-      this.$router.push(`/productList/${id}`)
+      this.$router.push(`/user/product/${id}`)
     },
     addCart (item, id) {
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`

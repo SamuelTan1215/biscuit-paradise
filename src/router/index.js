@@ -69,6 +69,10 @@ const routes = [
         path: 'faq',
         component: () => import('../views/user/FAQ.vue')
       },
+      {
+        path: 'service',
+        component: () => import('../views/user/Service.vue')
+      },
     ],
   },
   // 重新導向

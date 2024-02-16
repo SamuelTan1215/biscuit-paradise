@@ -6,7 +6,7 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg bg-transparent">
         <div class="container-fluid">
-          <router-link class="navbar-brand fs-3 fw-bold" to="/user">
+          <a @click="handleNavbarLinkClick('/user')" class="navbar-brand fs-3 fw-bold" >
             <img
               src="../assets/images/logo.png"
               alt="logo"
@@ -14,7 +14,7 @@
               height="30"
               class="d-inline-block align-text-top"
             />餅乾天堂
-          </router-link>
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -31,19 +31,23 @@
             id="navbarNavAltMarkup"
           >
             <div class="navbar-nav">
-              <router-link to="/user/productList" class="nav-link fs-5 hvr-fade"
-                >產品列表</router-link
+              <a @click="handleNavbarLinkClick('/user/productList')" data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup" class="nav-link fs-5 hvr-fade"
+                >產品列表</a
               >
-              <router-link to="/user/about" class="nav-link fs-5 hvr-fade"
-                >關於我們</router-link
+              <a @click="handleNavbarLinkClick('/user/about')" data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup" class="nav-link fs-5 hvr-fade"
+                >關於我們</a
               >
-              <router-link to="/user/faq" class="nav-link fs-5 hvr-fade"
-                >常見問題</router-link
+              <a @click="handleNavbarLinkClick('/user/faq')" data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup" class="nav-link fs-5 hvr-fade"
+                >常見問題</a
               >
             </div>
             <ul class="nav fs-5 navbar-nav">
               <li class="nav-item position-relative">
-                <router-link to="/user/favorite" class="nav-link">
+                <a @click="handleNavbarLinkClick('/user/favorite')" data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup" class="nav-link" title="我的最愛">
                   <span
                     class="position-absolute top-25 end-0 badge rounded-pill bg-danger badgeNum"
                     :class="{ 'd-none': favNum === 0 }"
@@ -52,23 +56,25 @@
                   >
                   <i class="bi bi-suit-heart-fill fs-3"/>
                   <span class="d-lg-none fs-5"> 我的最愛</span>
-                </router-link>
+                </a>
               </li>
               <li class="nav-item position-relative">
-                <router-link to="/user/cart" class="nav-link"
+                <a @click="handleNavbarLinkClick('/user/cart')" data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup" class="nav-link" title="購物車"
                   ><span
                     class="position-absolute top-25 end-0 badge rounded-pill bg-danger badgeNum"
                     style="font-size: 10px"
                     :class="{ 'd-none': cartNum === 0 }"
                     >{{ cartNum }}</span
                   ><i class="bi bi-cart3 fs-3"></i
-                  ><span class="d-lg-none fs-5"> 購物車</span></router-link
+                  ><span class="d-lg-none fs-5"> 購物車</span></a
                 >
               </li>
               <li class="nav-item">
-                <router-link to="/login" class="nav-link"
-                  ><i class="bi bi-person-circle fs-3"></i
-                  ><span class="d-lg-none fs-5"> 後臺登入</span></router-link
+                <a @click="handleNavbarLinkClick('/user/service')" data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup" class="nav-link" title="客服專區"
+                  ><i class="bi bi-person-workspace fs-3"></i>
+                  <span class="d-lg-none fs-5"> 客服專區</span></a
                 >
               </li>
             </ul>
@@ -95,6 +101,7 @@
 .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
   background-color: #6bdace;
   color: white;
+  cursor: pointer;
 }
 </style>
 
@@ -123,7 +130,10 @@ export default {
         this.favorite = {}
       }
       this.favNum = this.favorite.length
-    }
+    },
+    handleNavbarLinkClick(route) {
+      this.$router.push(route);
+    },
   },
   created () {
     this.getCart()

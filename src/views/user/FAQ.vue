@@ -25,7 +25,7 @@
             aria-expanded="true"
             aria-controls="collapseOne"
           >
-            餅乾天堂的餅乾有哪些口味？
+            餅乾天堂有那些產品呢？
           </button>
         </h2>
         <div
@@ -36,8 +36,7 @@
         >
           <div class="accordion-body text-muted">
             <i class="bi bi-shield-check text-success"></i>
-            我們提供多元支付方式:
-            ATM轉帳、信用卡、ApplePay、GooglePay、LinePay。
+            我們餅乾天堂主要有"造型餅乾"、"經典馬卡龍"、以及最新推出的"夢幻可頌"，另外也有貼心客製化服務！
           </div>
         </div>
       </div>
@@ -51,7 +50,7 @@
             aria-expanded="false"
             aria-controls="collapseTwo"
           >
-            有商品需要退換貨的話該怎麼辦
+            有商品需要退換貨的話該怎麼辦？
           </button>
         </h2>
         <div
@@ -84,7 +83,7 @@
             aria-expanded="false"
             aria-controls="collapseThree"
           >
-            請問下單後多久會寄出
+            請問下單後多久會寄出？
           </button>
         </h2>
         <div
