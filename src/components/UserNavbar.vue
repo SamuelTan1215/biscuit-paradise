@@ -6,7 +6,8 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg bg-transparent">
         <div class="container-fluid">
-          <router-link class="navbar-brand fs-3 fw-bold px-3 hvr-fade" to="/user">
+          <router-link @click="changePage('/user')" data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup" class="navbar-brand fs-3 fw-bold px-3 hvr-fade" to="/user">
             <img
               src="../assets/images/logo.png"
               alt="logo"
@@ -31,22 +32,23 @@
             id="navbarNavAltMarkup"
           >
             <div class="navbar-nav">
-              <router-link to="/user/productList" 
+              <router-link @click="changePage('/user/productList')" data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup" to="/user/productList" 
               class="nav-link fs-5 hvr-fade" 
                 >產品列表</router-link
               >
-              <router-link to="/user/about" data-bs-toggle="collapse"
+              <router-link @click="changePage('/user/about')" to="/user/about" data-bs-toggle="collapse"
               data-bs-target="#navbarNavAltMarkup" class="nav-link fs-5 hvr-fade"
                 >關於我們</router-link
               >
-              <router-link to="/user/faq" data-bs-toggle="collapse"
+              <router-link @click="changePage('/user/faq')" to="/user/faq" data-bs-toggle="collapse"
               data-bs-target="#navbarNavAltMarkup" class="nav-link fs-5 hvr-fade"
                 >常見問題</router-link
               >
             </div>
             <ul class="nav fs-5 navbar-nav">
               <li class="nav-item position-relative">
-                <router-link to="/user/favorite" data-bs-toggle="collapse"
+                <router-link @click="changePage('/user/favorite')" to="/user/favorite" data-bs-toggle="collapse"
               data-bs-target="#navbarNavAltMarkup" class="nav-link cursor-pointer" title="我的最愛">
                   <span
                     class="position-absolute top-25 end-0 badge rounded-pill bg-danger badgeNum"
@@ -59,7 +61,7 @@
                 </router-link>
               </li>
               <li class="nav-item position-relative">
-                <router-link to="/user/cart" data-bs-toggle="collapse"
+                <router-link @click="changePage('/user/cart')" to="/user/cart" data-bs-toggle="collapse"
               data-bs-target="#navbarNavAltMarkup" class="nav-link cursor-pointer" title="購物車"
                   ><span
                     class="position-absolute top-25 end-0 badge rounded-pill bg-danger badgeNum"
@@ -71,7 +73,7 @@
                 >
               </li>
               <li class="nav-item">
-                <router-link to="/user/service" data-bs-toggle="collapse"
+                <router-link @click="changePage('/user/service')" to="/user/service" data-bs-toggle="collapse"
               data-bs-target="#navbarNavAltMarkup" class="nav-link cursor-pointer" title="客服專區"
                   ><i class="bi bi-person-workspace fs-3"></i>
                   <span class="d-lg-none fs-5"> 客服專區</span></router-link
@@ -134,6 +136,9 @@ export default {
         this.favorite = {}
       }
       this.favNum = this.favorite.length
+    },
+    changePage(route){
+      this.$router.push(route);
     },
   },
   created () {
