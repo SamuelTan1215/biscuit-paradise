@@ -1,11 +1,11 @@
 # 餅乾天堂 - 電商網站（Vue3） 
 
-#####作品鏈接
+##### 作品鏈接
 [作品鏈接](https://samueltan1215.github.io/biscuit-paradise/?fbclid=IwAR07VM6AzLaDYhvECNaBckQFtfYlYYGkwSbqfT006nNuEnunQXziAgFh3cQ#/user "作品鏈接")
 
 ------------
 
-#####作品頁面
+##### 作品頁面
 ###### 前台（用戶）
 
 - HomePage.vue ：主頁
@@ -46,16 +46,23 @@
 ------------
 
 ##### 第三方套件
+
+- Axios / vue-axios : 遠端資料存取
+
+- VeeValidate : 表單驗證
+
 - Bootstrap Icon : icon 素材來源
 
 - AOS : 動畫效果
+
+- vue3-loading-overlay : 動畫效果
 
 - Swiper : 輪播效果
 
 ------------
 
 ##### 版控工具
-- git/github
+- git / github
 
 ------------
 ##### 安裝指南

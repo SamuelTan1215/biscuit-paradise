@@ -6,7 +6,7 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg bg-transparent">
         <div class="container-fluid">
-          <a @click="handleNavbarLinkClick('/user')" class="navbar-brand fs-3 fw-bold" >
+          <router-link class="navbar-brand fs-3 fw-bold px-3 hvr-fade" to="/user">
             <img
               src="../assets/images/logo.png"
               alt="logo"
@@ -14,7 +14,7 @@
               height="30"
               class="d-inline-block align-text-top"
             />餅乾天堂
-          </a>
+          </router-link>
           <button
             class="navbar-toggler"
             type="button"
@@ -31,23 +31,23 @@
             id="navbarNavAltMarkup"
           >
             <div class="navbar-nav">
-              <a @click="handleNavbarLinkClick('/user/productList')" data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup" class="nav-link fs-5 hvr-fade"
-                >產品列表</a
+              <router-link to="/user/productList" 
+              class="nav-link fs-5 hvr-fade" 
+                >產品列表</router-link
               >
-              <a @click="handleNavbarLinkClick('/user/about')" data-bs-toggle="collapse"
+              <router-link to="/user/about" data-bs-toggle="collapse"
               data-bs-target="#navbarNavAltMarkup" class="nav-link fs-5 hvr-fade"
-                >關於我們</a
+                >關於我們</router-link
               >
-              <a @click="handleNavbarLinkClick('/user/faq')" data-bs-toggle="collapse"
+              <router-link to="/user/faq" data-bs-toggle="collapse"
               data-bs-target="#navbarNavAltMarkup" class="nav-link fs-5 hvr-fade"
-                >常見問題</a
+                >常見問題</router-link
               >
             </div>
             <ul class="nav fs-5 navbar-nav">
               <li class="nav-item position-relative">
-                <a @click="handleNavbarLinkClick('/user/favorite')" data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup" class="nav-link" title="我的最愛">
+                <router-link to="/user/favorite" data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup" class="nav-link cursor-pointer" title="我的最愛">
                   <span
                     class="position-absolute top-25 end-0 badge rounded-pill bg-danger badgeNum"
                     :class="{ 'd-none': favNum === 0 }"
@@ -56,25 +56,25 @@
                   >
                   <i class="bi bi-suit-heart-fill fs-3"/>
                   <span class="d-lg-none fs-5"> 我的最愛</span>
-                </a>
+                </router-link>
               </li>
               <li class="nav-item position-relative">
-                <a @click="handleNavbarLinkClick('/user/cart')" data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup" class="nav-link" title="購物車"
+                <router-link to="/user/cart" data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup" class="nav-link cursor-pointer" title="購物車"
                   ><span
                     class="position-absolute top-25 end-0 badge rounded-pill bg-danger badgeNum"
                     style="font-size: 10px"
                     :class="{ 'd-none': cartNum === 0 }"
                     >{{ cartNum }}</span
                   ><i class="bi bi-cart3 fs-3"></i
-                  ><span class="d-lg-none fs-5"> 購物車</span></a
+                  ><span class="d-lg-none fs-5"> 購物車</span></router-link
                 >
               </li>
               <li class="nav-item">
-                <a @click="handleNavbarLinkClick('/user/service')" data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup" class="nav-link" title="客服專區"
+                <router-link to="/user/service" data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup" class="nav-link cursor-pointer" title="客服專區"
                   ><i class="bi bi-person-workspace fs-3"></i>
-                  <span class="d-lg-none fs-5"> 客服專區</span></a
+                  <span class="d-lg-none fs-5"> 客服專區</span></router-link
                 >
               </li>
             </ul>
@@ -101,6 +101,10 @@
 .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
   background-color: #6bdace;
   color: white;
+  cursor: pointer;
+}
+
+.cursor-pointer:hover,.cursor-pointer:focus,.cursor-pointer:active {
   cursor: pointer;
 }
 </style>
@@ -130,9 +134,6 @@ export default {
         this.favorite = {}
       }
       this.favNum = this.favorite.length
-    },
-    handleNavbarLinkClick(route) {
-      this.$router.push(route);
     },
   },
   created () {

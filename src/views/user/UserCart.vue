@@ -1,6 +1,6 @@
 <template v-if="cart.carts">
   <LoadingComp :active="isLoading" />
-  <div class="container py-lg-5">
+  <div class="container py-lg-3">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><router-link to="/user" active-class="active-reset">首頁</router-link></li>

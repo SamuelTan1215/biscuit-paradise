@@ -1,6 +1,6 @@
 <template>
   <LoadingComp :active="isLoading" />
-  <section class="container py-lg-5">
+  <section class="container py-lg-3">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><router-link to="/user" active-class="active-reset">首頁</router-link></li>

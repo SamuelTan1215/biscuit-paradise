@@ -1,5 +1,5 @@
 <template>
-    <section class="py-5 bg-light">
+    <section class="py-lg-3 bg-light">
       <div class="container">
         <div class="service text-center px-4 py-5 mb-5">
           <div class="text-white text-center p-3 cover d-inline-block">
