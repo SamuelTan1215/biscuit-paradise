@@ -4,6 +4,10 @@
 [作品鏈接](https://samueltan1215.github.io/biscuit-paradise/?fbclid=IwAR07VM6AzLaDYhvECNaBckQFtfYlYYGkwSbqfT006nNuEnunQXziAgFh3cQ#/user "作品鏈接")
 
 ------------
+##### 作品畫面
+[![作品畫面](https://i.imgur.com/368KGUh.jpg "作品畫面")](https://i.imgur.com/368KGUh.jpg "作品畫面")
+
+------------
 
 ##### 作品頁面
 ###### 前台（用戶）
@@ -61,7 +65,14 @@
 
 ------------
 
+##### API
+
+- 六角學院API
+
+------------
+
 ##### 版控工具
+
 - git / github
 
 ------------
