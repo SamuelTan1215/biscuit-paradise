@@ -6,8 +6,7 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg bg-transparent">
         <div class="container-fluid">
-          <router-link @click="changePage('/user')" data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup" class="navbar-brand fs-3 fw-bold px-3 hvr-fade" to="/user">
+          <router-link @click="hideCollapse()" to="/user" class="navbar-brand fs-3 fw-bold px-3 hvr-fade" >
             <img
               src="../assets/images/logo.png"
               alt="logo"
@@ -30,26 +29,23 @@
           <div
             class="collapse navbar-collapse justify-content-between"
             id="navbarNavAltMarkup"
+            ref="navbarNavAltMarkup"
           >
             <div class="navbar-nav">
-              <router-link @click="changePage('/user/productList')" data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup" to="/user/productList" 
+              <router-link @click="hideCollapse()" to="/user/productList" 
               class="nav-link fs-5 hvr-fade" 
                 >產品列表</router-link
               >
-              <router-link @click="changePage('/user/about')" to="/user/about" data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup" class="nav-link fs-5 hvr-fade"
+              <router-link @click="hideCollapse()" to="/user/about" class="nav-link fs-5 hvr-fade"
                 >關於我們</router-link
               >
-              <router-link @click="changePage('/user/faq')" to="/user/faq" data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup" class="nav-link fs-5 hvr-fade"
+              <router-link @click="hideCollapse()" to="/user/faq" class="nav-link fs-5 hvr-fade"
                 >常見問題</router-link
               >
             </div>
             <ul class="nav fs-5 navbar-nav">
               <li class="nav-item position-relative">
-                <router-link @click="changePage('/user/favorite')" to="/user/favorite" data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup" class="nav-link cursor-pointer" title="我的最愛">
+                <router-link @click="hideCollapse()" to="/user/favorite" class="nav-link cursor-pointer" title="我的最愛">
                   <span
                     class="position-absolute top-25 end-0 badge rounded-pill bg-danger badgeNum"
                     :class="{ 'd-none': favNum === 0 }"
@@ -61,8 +57,7 @@
                 </router-link>
               </li>
               <li class="nav-item position-relative">
-                <router-link @click="changePage('/user/cart')" to="/user/cart" data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup" class="nav-link cursor-pointer" title="購物車"
+                <router-link @click="hideCollapse()" to="/user/cart" class="nav-link cursor-pointer" title="購物車"
                   ><span
                     class="position-absolute top-25 end-0 badge rounded-pill bg-danger badgeNum"
                     style="font-size: 10px"
@@ -73,8 +68,7 @@
                 >
               </li>
               <li class="nav-item">
-                <router-link @click="changePage('/user/service')" to="/user/service" data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup" class="nav-link cursor-pointer" title="客服專區"
+                <router-link @click="hideCollapse()" to="/user/service" class="nav-link cursor-pointer" title="客服專區"
                   ><i class="bi bi-person-workspace fs-3"></i>
                   <span class="d-lg-none fs-5"> 客服專區</span></router-link
                 >
@@ -113,6 +107,7 @@
 
 <script>
 import favorite from '@/methods/favorite'
+import { Collapse } from 'bootstrap'
 
 export default {
   data () {
@@ -120,6 +115,7 @@ export default {
       favorite: favorite.getFavorite() || [],
       cartNum: 0,
       favNum: 0,
+      navbarCollapse:{},
     }
   },
   inject: ['emitter'],
@@ -137,8 +133,8 @@ export default {
       }
       this.favNum = this.favorite.length
     },
-    changePage(route){
-      this.$router.push(route);
+    hideCollapse(){
+      this.navbarCollapse.hide()
     },
   },
   created () {
@@ -148,6 +144,9 @@ export default {
   mounted () {
     this.emitter.on('update-cart', this.getCart)
     this.emitter.on('update-favorite', this.getFavorite)
+    this.navbarCollapse= new Collapse(this.$refs.navbarNavAltMarkup, {
+      toggle: false,
+    })
   }
 }
 </script>
