@@ -20,7 +20,6 @@
   </div>
 </template>
 
-
 <script>
 import UserNavbar from '@/components/UserNavbar.vue'
 import UserFooter from '@/components/UserFooter.vue'
