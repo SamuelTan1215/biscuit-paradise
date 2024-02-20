@@ -30,7 +30,6 @@
       </div>
     </div>
   </div>
-
   <div class="my-5 row justify-content-center">
     <form class="col-md-4" @submit.prevent="payOrder">
       <table class="table align-middle">
@@ -56,7 +55,6 @@
           </tr>
         </tfoot>
       </table>
-
       <table class="table">
         <tbody>
           <tr>

@@ -3,9 +3,15 @@
   <div class="container py-lg-5">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><router-link to="/user">首頁</router-link></li>
-        <li class="breadcrumb-item" active-class="active-reset">
-          <router-link to="/user/productList">產品列表</router-link>
+        <li class="breadcrumb-item">
+          <router-link to="/user" active-class="active-reset">
+            首頁
+          </router-link>
+        </li>
+        <li class="breadcrumb-item" >
+          <router-link to="/user/productList" class="active-reset">
+            產品列表
+          </router-link>
         </li>
         <li class="breadcrumb-item " aria-current="page" exact-active-class="active-reset">
           {{ product.title }}
@@ -178,13 +184,11 @@
 .activeFav{
   background-color:crimson;
 }
-
 .router-link-exact-active {
   background-color: transparent !important;
   font-weight: normal !important;
   color: inherit !important;
 }
-
 .active-reset {
   text-decoration: none;
   color: #212529;

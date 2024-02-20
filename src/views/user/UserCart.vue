@@ -16,7 +16,6 @@
         看看更多餅乾
       </button>
     </div>
-
     <div class="row">
       <div class="col-lg-8">
         <div
@@ -118,11 +117,23 @@
   </div>
 </template>
 
-
 <style lang="scss" scoped>
-  .active-reset {
-  text-decoration: none;
-  color: #212529;
+.productImg {
+    width: 150px;
+    height: 100px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.btnCircle {
+  &:hover {
+    color: white;
+    background-color: #f3acc2;
+    border-color: #f3acc2;
+  }
+}
+.active-reset {
+text-decoration: none;
+color: #212529;
 }
 </style>
 
@@ -193,19 +204,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.productImg {
-    width: 150px;
-    height: 100px;
-    -o-object-fit: cover;
-    object-fit: cover;
-}
-.btnCircle {
-  &:hover {
-    color: white;
-    background-color: #f3acc2;
-    border-color: #f3acc2;
-  }
-}
-</style>

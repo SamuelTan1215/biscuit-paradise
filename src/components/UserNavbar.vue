@@ -18,8 +18,7 @@
           <button
             class="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
+            @click="collapseController('toggle')"
             aria-controls="navbarNavAltMarkup"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -99,7 +98,6 @@
   color: white;
   cursor: pointer;
 }
-
 .cursor-pointer:hover,.cursor-pointer:focus,.cursor-pointer:active {
   cursor: pointer;
 }
@@ -135,6 +133,9 @@ export default {
     },
     hideCollapse(){
       this.navbarCollapse.hide()
+    },
+    collapseController(method = 'hide') {
+      this.navbarCollapse[method]();
     },
   },
   created () {

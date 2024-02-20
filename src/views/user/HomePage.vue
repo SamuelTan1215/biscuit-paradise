@@ -9,7 +9,6 @@
       </div>
     </div>
   </header>
-
   <section class="container py-5" data-aos="fade-up" data-aos-duration="1400" data-aos-delay="1000">
     <h2 class="text-center lh-lg">—— 主要服務項目 ——</h2>
     <div class="row row-cols-1 row-cols-md-3">
@@ -20,8 +19,8 @@
             <h5 class="card-title fw-bold">美味的餅乾</h5>
             <p class="card-text">
               精心烘焙的餅乾，最頂級的原料！<br class="d-none d-md-block">
-               保證每一口都帶來滿滿的幸福感，為您打造最美味的
-               餅乾體驗。
+              保證每一口都帶來滿滿的幸福感，為您打造最美味的
+              餅乾體驗。
             </p>
           </div>
         </div>
@@ -46,7 +45,7 @@
             <h5 class="card-title fw-bold">客製化服務</h5>
             <p class="card-text">
               您的需求,我們的動力！<br class="d-none d-md-block">
-               提供多樣化選擇，貼心客製化需求。無論活動禮盒或獨特口味，歡迎聯絡<a
+              提供多樣化選擇，貼心客製化需求。無論活動禮盒或獨特口味，歡迎聯絡<a
                 href="mailto:example@support.com"
                 class="text-decoration-none"
                 >客服</a>。
@@ -56,18 +55,18 @@
       </div>
     </div>
   </section>
-
   <section class="py-3">
     <div class="container">
       <div class="d-flex justify-content-between">
-        <h3><i class="bi bi-hand-thumbs-up-fill text-warning"/> 精選產品</h3>
+        <h3>
+          <i class="bi bi-hand-thumbs-up-fill text-warning"/> 精選產品
+        </h3>
         <a
           href="#"
           class="text-decoration-none fs-5 text-end fw-bold"
           @click.prevent="$router.push('/user/productList')"
           >更多美味 <i class="bi bi-arrow-up-right-square-fill"></i></a>
       </div>
-
       <swiper
         :slidesPerView="4"
         :spaceBetween="30"
@@ -159,8 +158,6 @@
       </swiper>
     </div>
   </section>
-
-
   <section class="container pt-4" data-aos="fade-left">
     <div class="row flex-row-reverse g-3 ">
       <div class="col-lg-6">

@@ -7,7 +7,9 @@
         <li class="breadcrumb-item">我的最愛</li>
       </ol>
     </nav>
-    <h2><i class="bi bi-suit-heart-fill fs-3 text-danger"/> 我的最愛</h2>
+    <h2>
+      <i class="bi bi-suit-heart-fill fs-3 text-danger"/> 我的最愛
+    </h2>
     <hr />
     <div class="row">
       <div class="col-lg-8">
@@ -82,17 +84,16 @@
 </template>
 
 <style lang="scss" scoped>
-  .productImg {
-    width: 150px;
-    height: 100px;
-    -o-object-fit: cover;
-    object-fit: cover;
+.productImg {
+  width: 150px;
+  height: 100px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 .active-reset {
   text-decoration: none;
   color: #212529;
 }
-
 </style>
 
 <script>

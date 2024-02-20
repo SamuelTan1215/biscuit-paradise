@@ -3,7 +3,11 @@
   <section class="container py-lg-3">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><router-link to="/user" active-class="active-reset">首頁</router-link></li>
+        <li class="breadcrumb-item">
+          <router-link to="/user" active-class="active-reset">
+            首頁
+          </router-link>
+        </li>
         <li class="breadcrumb-item">產品列表</li>
       </ol>
     </nav>
@@ -28,7 +32,6 @@
           </button>
         </div>
       </div>
-
       <div class="col-lg-9">
         <div class="row row-cols-lg-3 row-cols-sm-2 row-cols-1 g-4">
           <div class="col" v-for="item in filterProducts" :key="item.id">
@@ -67,7 +70,6 @@
                       特價 {{ $formatFilters.currency(item.price) }} 元
                     </p>
                   </div>
-                  <!-- relative定位讓toggleFavourite正常運作 -->
                   <div class="text-end position-relative" style="z-index:3;">
                     <button
                       type="button"
@@ -117,12 +119,9 @@
     transform: scale(1.05);
   }
 }
-
-
 .fixed-width-button {
   width: 100%; /* 或者使用具體的寬度值，確保每個按鈕有相同的寬度 */
 }
-
 .active{
   background-color:crimson;
 }
@@ -131,14 +130,11 @@
   font-weight: normal !important;
   color: inherit !important;
 }
-
 .active-reset {
   text-decoration: none;
   color: #212529;
 }
-
 </style>
-
 
 <script>
 import favorite from '@/methods/favorite'

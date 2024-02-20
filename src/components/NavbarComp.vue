@@ -1,7 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <!-- <a class="navbar-brand" href="#">管理者後台</a> -->
       <router-link class="navbar-brand"  to="/dashboard/products" exact-active-class="link-light">管理者後台</router-link>
       <button 
         class="navbar-toggler"

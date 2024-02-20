@@ -27,7 +27,6 @@
             v-model="user.password"
           />
         </div>
-
         <div class="d-flex justify-content-between align-items-center mt-4">
           <div>
             <router-link to="/user" class="fs-5 fw-bold text-decoration-none">
@@ -37,7 +36,6 @@
           </div>
           <button class="btn btn-lg btn-primary btn-block " type="submit">登入</button>
         </div>
-
       </div>
     </form>
   </div>

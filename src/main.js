@@ -8,7 +8,6 @@ import {Form, Field, ErrorMessage, defineRule, configure} from 'vee-validate';
 import * as AllRules from '@vee-validate/rules'
 import { localize, setLocale } from '@vee-validate/i18n';
 import zhTW from '@vee-validate/i18n/dist/locale/zh_TW.json';
-
 import App from './App.vue';
 import router from './router';
 import { currency, date } from './methods/formatFilters';
@@ -17,11 +16,13 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 const app = createApp(App)
 
+// formatFilter.js
 app.config.globalProperties.$formatFilters = {
   currency,
   date,
 };
 
+// vee-validate start
 Object.keys(AllRules).forEach((rule) => {
   defineRule(rule, AllRules[rule]);
 });
@@ -32,9 +33,9 @@ configure({
 });
 // 設定預設語系
 setLocale('zh_TW');
+// vee-validate end
 
-
-// 此函式的用途是整合 Ajax 的錯誤事件，統一整理發送給予 Toast 處理
+// 此函式的用來整合 ajax 的錯誤事件，統一整理發送給予 Toast 處理
 app.config.globalProperties.$httpMessageState = $httpMessageState;
 
 app.use(VueAxios, axios);
@@ -43,6 +44,5 @@ app.component('LoadingComp', Loading);
 app.component('Form', Form);
 app.component('Field', Field);
 app.component('ErrorMessage', ErrorMessage);
-
 app.mount('#app')
 
